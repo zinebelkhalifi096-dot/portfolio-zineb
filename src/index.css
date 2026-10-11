@@ -1,0 +1,224 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── Base styles ──────────────────────────────────────────────────────────── */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #FCF9EA;
+  color: #333333;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+.dark body,
+body.dark-mode {
+  background-color: #1a1a2e;
+  color: #e0e0e0;
+}
+
+/* ─── Scrollbar custom ─────────────────────────────────────────────────────── */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #FFA4A4;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ff8a8a;
+}
+
+/* ─── Selection ────────────────────────────────────────────────────────────── */
+::selection {
+  background: #FFA4A4;
+  color: white;
+}
+
+/* ─── Typography ───────────────────────────────────────────────────────────── */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ─── Typing cursor ────────────────────────────────────────────────────────── */
+.typing-cursor {
+  display: inline-block;
+  width: 3px;
+  height: 1.2em;
+  background-color: #FFA4A4;
+  margin-left: 4px;
+  vertical-align: text-bottom;
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* ─── Glass effect ─────────────────────────────────────────────────────────── */
+.glass {
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* ─── Gradient text ────────────────────────────────────────────────────────── */
+.gradient-text {
+  background: linear-gradient(135deg, #FFA4A4, #BADFDB);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── Section heading underline ────────────────────────────────────────────── */
+.section-line {
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #FFA4A4, #BADFDB);
+  border-radius: 2px;
+  margin: 0.75rem auto 0;
+}
+
+/* ─── Card hover effect ────────────────────────────────────────────────────── */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(255, 164, 164, 0.15);
+}
+
+/* ─── Skill tag hover ──────────────────────────────────────────────────────── */
+.skill-tag {
+  transition: all 0.3s ease;
+}
+.skill-tag:hover {
+  background-color: #FFA4A4;
+  color: white;
+  transform: scale(1.05);
+}
+
+/* ─── Progress bar animation ───────────────────────────────────────────────── */
+.progress-bar {
+  transition: width 1.5s ease-in-out;
+}
+
+/* ─── Timeline line ────────────────────────────────────────────────────────── */
+.timeline-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, #FFA4A4, #BADFDB);
+}
+
+@media (min-width: 768px) {
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ─── Timeline dot ─────────────────────────────────────────────────────────── */
+.timeline-dot {
+  position: absolute;
+  left: 14px;
+  top: 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #FFA4A4;
+  border: 3px solid #FCF9EA;
+  z-index: 2;
+}
+
+.dark .timeline-dot {
+  border-color: #1a1a2e;
+}
+
+@media (min-width: 768px) {
+  .timeline-dot {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ─── Blob decorations ─────────────────────────────────────────────────────── */
+.blob {
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.3;
+  position: absolute;
+  pointer-events: none;
+}
+
+.dark .blob {
+  opacity: 0.15;
+}
+
+/* ─── Modal backdrop ───────────────────────────────────────────────────────── */
+.modal-backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+}
+
+/* ─── Hamburger animation ──────────────────────────────────────────────────── */
+.hamburger-line {
+  transition: all 0.3s ease;
+}
+
+/* ─── Responsive image placeholder ─────────────────────────────────────────── */
+.profile-placeholder {
+  background: linear-gradient(135deg, #FFA4A4 0%, #BADFDB 100%);
+}
+
+/* ─── Button gradient ──────────────────────────────────────────────────────── */
+.btn-gradient {
+  background: linear-gradient(135deg, #FFA4A4, #ff8a8a);
+  transition: all 0.3s ease;
+}
+.btn-gradient:hover {
+  background: linear-gradient(135deg, #ff8a8a, #FFA4A4);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(255, 164, 164, 0.4);
+}
+
+/* ─── Outline button ───────────────────────────────────────────────────────── */
+.btn-outline {
+  border: 2px solid #FFA4A4;
+  color: #FFA4A4;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background-color: #FFA4A4;
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* ─── Filter button active ─────────────────────────────────────────────────── */
+.filter-active {
+  background: linear-gradient(135deg, #FFA4A4, #BADFDB);
+  color: white;
+}
+
+/* ─── Form focus ───────────────────────────────────────────────────────────── */
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #FFA4A4;
+  box-shadow: 0 0 0 3px rgba(255, 164, 164, 0.2);
+}
