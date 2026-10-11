@@ -1,4 +1,4 @@
-﻿import {
+import {
   Code2, Server, Monitor, Smartphone, Brain, Database, Container, Globe,
 } from 'lucide-react';
 
@@ -12,7 +12,7 @@ export const personalInfo = {
   phone: '+212 726-272083',
   github: 'https://github.com/zinebelkhalifi096-dot',
   linkedin: 'https://www.linkedin.com/in/zineb-e-865826288/',
-  cvPath: '/cv-zineb-el-khalifi.pdf', // fichier à placer dans public/
+  cvPath: '/cv-zineb-el-khalifi.pdf',
   profilePhoto: '/photo.jpeg',
   stageInfo: 'Disponible pour un stage PFE – février 2027',
 };
@@ -126,6 +126,14 @@ export const projects = [
     demo: '',
     images: [
       {
+        src: '/projects/vigiphos/01-connexion.jpeg',
+        title: 'Page de connexion',
+        caption: 'Authentification sécurisée des utilisateurs de la plateforme.',
+        description: 'Écran de connexion permettant à chaque utilisateur d\'accéder à son espace selon son profil : administrateur, technicien ou demandeur.',
+        alt: 'Page de connexion de la plateforme VIGIPHOS.',
+        tags: ['Python', 'Django', 'Bootstrap', 'HTML/CSS'],
+      },
+      {
         src: '/projects/vigiphos/02-accueil-technicien.jpeg',
         title: 'Accueil technicien',
         caption: 'Accueil personnalisé orientant le technicien vers ses incidents assignés.',
@@ -197,6 +205,30 @@ export const projects = [
         alt: 'Tableau d\'administration des comptes utilisateurs avec rôles, statuts d\'activité et boutons d\'action.',
         tags: ['Python', 'Django', 'Bootstrap', 'HTML/CSS', 'JavaScript', 'SQLite'],
       },
+      {
+        src: '/projects/vigiphos/04-notifications.jpeg',
+        title: 'Notifications',
+        caption: 'Suivi des alertes liées aux incidents.',
+        description: 'Page de notifications qui informe l\'utilisateur des événements liés à ses incidents : affectation, changement de statut ou mise à jour.',
+        alt: 'Page de notifications de la plateforme VIGIPHOS.',
+        tags: ['Python', 'Django', 'Bootstrap', 'JavaScript'],
+      },
+      {
+        src: '/projects/vigiphos/12-nouvel-utilisateur.jpeg',
+        title: 'Création d\'un utilisateur',
+        caption: 'Formulaire d\'ajout d\'un compte par l\'administrateur.',
+        description: 'Formulaire permettant à l\'administrateur de créer un compte et de lui attribuer un rôle : administrateur, technicien (niveaux 1 à 3) ou utilisateur.',
+        alt: 'Formulaire de création d\'un nouvel utilisateur.',
+        tags: ['Python', 'Django', 'Bootstrap', 'HTML/CSS'],
+      },
+      {
+        src: '/projects/vigiphos/13-modifier-utilisateur.jpeg',
+        title: 'Modification d\'un utilisateur',
+        caption: 'Mise à jour des informations et du rôle d\'un compte.',
+        description: 'Formulaire d\'édition d\'un compte existant : modification des informations personnelles, du rôle et de l\'état d\'activité.',
+        alt: 'Formulaire de modification d\'un utilisateur.',
+        tags: ['Python', 'Django', 'Bootstrap', 'HTML/CSS'],
+      },
     ],
   },
   {
@@ -216,6 +248,14 @@ export const projects = [
         description: "Page de documentation décrivant la structure globale d'un référentiel de code analysé. Elle répertorie les répertoires clés, les modules principaux et leur rôle au sein de l'application. La table des matières latérale structure la navigation entre les composants et les diagrammes de conception.",
         alt: "Interface de documentation MkDocs détaillant l'architecture et les modules d'un projet Python.",
         tags: ['Python', 'MkDocs', 'Material for MkDocs', 'Ollama'],
+      },
+      {
+        src: '/projects/doc-generator/02-api.png',
+        title: 'Documentation des endpoints d\'API',
+        caption: 'Endpoints détectés automatiquement dans le code analysé.',
+        description: 'Page de documentation listant les endpoints d\'API repérés dans le dépôt, avec leur méthode et leur rôle, générée automatiquement par le modèle local.',
+        alt: 'Page MkDocs listant les endpoints d\'API d\'un projet.',
+        tags: ['Python', 'MkDocs', 'Ollama'],
       },
       {
         src: '/projects/doc-generator/03-explication-code.png',
@@ -272,6 +312,46 @@ export const projects = [
         description: "Sortie console d'un job de compilation illustrant la réutilisation du fichier .doc_cache.json entre les exécutions. Cette étape conserve les résultats des analyses précédentes pour éviter de solliciter à nouveau le modèle sur des fichiers inchangés.",
         alt: "Journal d'un job GitLab montrant l'utilisation du cache lors de la génération de documentation.",
         tags: ['GitLab CI/CD', 'Python'],
+      },
+      {
+        src: '/projects/doc-generator/05-modeles-ia.png',
+        title: 'Modèles de langage utilisés',
+        caption: 'Comparaison des modèles locaux testés.',
+        description: 'Présentation des modèles de langage exécutés en local via Ollama et comparés pendant le stage, pour choisir le meilleur compromis entre qualité et vitesse.',
+        alt: 'Page présentant les modèles de langage locaux utilisés.',
+        tags: ['Ollama', 'Qwen2.5', 'Mistral', 'Python'],
+      },
+      {
+        src: '/projects/doc-generator/06-configuration-variables.png',
+        title: 'Configuration du pipeline',
+        caption: 'Variables d\'environnement de l\'intégration continue.',
+        description: 'Paramétrage des variables GitLab CI/CD qui pilotent l\'exécution du générateur : modèle utilisé, langue de la documentation et options de génération.',
+        alt: 'Écran de configuration des variables CI/CD dans GitLab.',
+        tags: ['GitLab CI/CD', 'Python'],
+      },
+      {
+        src: '/projects/doc-generator/07-gitlab-projets.png',
+        title: 'Projets analysés dans GitLab',
+        caption: 'Dépôts traités par l\'outil de documentation.',
+        description: 'Vue des projets GitLab sur lesquels le générateur est déployé pour produire et mettre à jour leur documentation.',
+        alt: 'Liste de projets dans l\'interface GitLab.',
+        tags: ['GitLab', 'GitLab CI/CD'],
+      },
+      {
+        src: '/projects/doc-generator/11-job-chatbot.png',
+        title: 'Exécution du job chatbot',
+        caption: 'Journal du job qui traite les questions /ask.',
+        description: 'Sortie d\'un job GitLab CI qui lit les commentaires des Merge Requests, interroge le système RAG et publie la réponse.',
+        alt: 'Journal d\'un job GitLab CI exécutant le chatbot documentaire.',
+        tags: ['GitLab CI/CD', 'RAG', 'Python'],
+      },
+      {
+        src: '/projects/doc-generator/13-reponse-chatbot.png',
+        title: 'Réponse du chatbot documentaire',
+        caption: 'Réponse générée par le système RAG.',
+        description: 'Exemple de réponse du chatbot à une question posée par un développeur, produite à partir de la documentation indexée du projet.',
+        alt: 'Réponse du chatbot documentaire dans une Merge Request.',
+        tags: ['RAG', 'Ollama', 'GitLab'],
       },
     ],
   },
