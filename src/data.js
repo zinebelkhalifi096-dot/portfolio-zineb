@@ -12,9 +12,8 @@ export const personalInfo = {
   phone: '+212 726-272083',
   github: 'https://github.com/zinebelkhalifi096-dot',
   linkedin: 'https://www.linkedin.com/in/zineb-e-865826288/',
-  cvPath: '/cv-zineb-el-khalifi.pdf', // À REMPLACER : déposer le PDF dans public/
-  // À REMPLACER : remplacer par le chemin de ta vraie photo dans public/
-  profilePhoto: null,
+  cvPath: '/cv-zineb-el-khalifi.pdf', // fichier à placer dans public/
+  profilePhoto: null, // quand public/photo.jpg existe, remplacer null par '/photo.jpg'
   stageInfo: 'Disponible pour un stage PFE – février 2027',
 };
 
@@ -120,7 +119,7 @@ export const projects = [
     title: 'VIGIPHOS',
     category: 'Web',
     badge: 'Projet OCP',
-    role: '[À COMPLÉTER]',
+    role: 'Stagiaire à l\'OCP : développement de la plateforme avec Django',
     summary: 'Plateforme web de gestion et de suivi des incidents techniques conçue pour le site OCP de Khouribga avec le framework Django.\nElle structure le traitement des pannes à travers trois profils d\'accès distincts : administrateur, techniciens N1 à N3 et utilisateurs demandeurs.\nDéveloppée en architecture MVC avec base de données SQLite, l\'application a été finalisée et testée en environnement local.',
     tags: ['Python', 'Django', 'SQLite', 'Bootstrap', 'HTML/CSS', 'JavaScript'],
     github: '',
@@ -283,8 +282,8 @@ export const projects = [
     shortDescription: 'Prédiction de la réussite des étudiants avec une API FastAPI, une interface React et des modèles ML.',
     longDescription: 'Application web full-stack dédiée à la prédiction de la réussite académique des étudiants. Le backend est construit avec FastAPI et expose des endpoints REST pour les prédictions. Le frontend React offre une interface intuitive pour saisir les données et visualiser les résultats. Trois modèles de machine learning (Random Forest, XGBoost et SVM) ont été entraînés et comparés avec scikit-learn. Les données sont stockées dans une base MariaDB. Le système permet aux enseignants d\'identifier les étudiants à risque et d\'agir en amont.',
     tags: ['FastAPI', 'React', 'MariaDB', 'Scikit-learn', 'Random Forest', 'XGBoost', 'SVM'],
-    github: '', // À REMPLACER
-    demo: '',   // À REMPLACER
+    github: '',
+    demo: '',
   },
   {
     title: 'Gestion de cinéma et bibliothèque',
@@ -292,8 +291,58 @@ export const projects = [
     shortDescription: 'Applications Spring Boot avec JPA, Thymeleaf, API REST sécurisées et déploiement Docker.',
     longDescription: 'Ensemble d\'applications web Java construites avec Spring Boot pour la gestion d\'un cinéma et d\'une bibliothèque. Utilise JPA/Hibernate pour la persistance des données et Thymeleaf pour le rendu côté serveur. Les API REST sont documentées avec Swagger/OpenAPI. La sécurité est assurée par Spring Security avec authentification JWT et intégration Keycloak pour le SSO. Le déploiement est conteneurisé avec Docker Compose et utilise MySQL comme base de données.',
     tags: ['Spring Boot', 'JPA', 'Thymeleaf', 'Swagger', 'JWT', 'Keycloak', 'Docker', 'MySQL'],
-    github: '', // À REMPLACER
-    demo: '',   // À REMPLACER
+    github: '',
+    demo: '',
+    images: [
+      {
+        src: '/projects/cinema/01-tableau-de-bord.jpeg',
+        title: 'Tableau de bord',
+        caption: 'Vue de synthèse de l\'activité du cinéma.',
+        description: 'Page d\'accueil de l\'application de gestion du cinéma. Elle regroupe les indicateurs principaux et donne accès aux modules : films, séances et billets.',
+        alt: 'Tableau de bord de l\'application de gestion de cinéma.',
+        tags: ['Spring Boot', 'Thymeleaf', 'MySQL'],
+      },
+      {
+        src: '/projects/cinema/02-a-l-affiche.jpeg',
+        title: 'Films à l\'affiche',
+        caption: 'Liste des films actuellement programmés.',
+        description: 'Interface présentant les films à l\'affiche. Les données sont lues en base via JPA et affichées côté serveur avec Thymeleaf.',
+        alt: 'Liste des films à l\'affiche dans l\'application de gestion de cinéma.',
+        tags: ['Spring Boot', 'JPA', 'Thymeleaf'],
+      },
+      {
+        src: '/projects/cinema/03-nouveau-film.jpeg',
+        title: 'Ajout d\'un nouveau film',
+        caption: 'Formulaire de création d\'un film dans le catalogue.',
+        description: 'Formulaire permettant d\'enregistrer un nouveau film dans la base de données, avec validation des champs avant l\'enregistrement.',
+        alt: 'Formulaire d\'ajout d\'un nouveau film.',
+        tags: ['Spring Boot', 'JPA', 'Thymeleaf'],
+      },
+      {
+        src: '/projects/cinema/04-seances.jpeg',
+        title: 'Gestion des séances',
+        caption: 'Planification des projections.',
+        description: 'Écran de gestion des séances de projection, qui associe chaque film à une salle, une date et une heure.',
+        alt: 'Liste des séances de projection du cinéma.',
+        tags: ['Spring Boot', 'JPA', 'MySQL'],
+      },
+      {
+        src: '/projects/cinema/05-vendre-un-billet.jpeg',
+        title: 'Vente d\'un billet',
+        caption: 'Interface de vente au guichet.',
+        description: 'Formulaire de vente de billets : sélection de la séance puis enregistrement de la vente en base de données.',
+        alt: 'Formulaire de vente d\'un billet de cinéma.',
+        tags: ['Spring Boot', 'Thymeleaf', 'MySQL'],
+      },
+      {
+        src: '/projects/cinema/06-billets.jpeg',
+        title: 'Historique des billets',
+        caption: 'Suivi des billets vendus.',
+        description: 'Liste des billets vendus, qui permet de suivre l\'activité du guichet et de retrouver une vente.',
+        alt: 'Liste des billets vendus dans l\'application de cinéma.',
+        tags: ['Spring Boot', 'JPA', 'Thymeleaf'],
+      },
+    ],
   },
   {
     title: 'Quizapp, SmartApp, MoviesApp',
@@ -301,8 +350,8 @@ export const projects = [
     shortDescription: 'Applications mobiles avec Java (Android), Flutter et React Native, capteurs et Firebase.',
     longDescription: 'Collection d\'applications mobiles développées avec différentes technologies : QuizApp en Java natif Android pour un quiz interactif, SmartApp avec Flutter exploitant les capteurs du téléphone (accéléromètre, GPS) pour des fonctionnalités contextuelles, et MoviesApp en React Native connectée à une API de films avec authentification Firebase. Ces projets démontrent la polyvalence en développement mobile multi-plateforme.',
     tags: ['Java Android', 'Flutter', 'React Native', 'Firebase', 'Capteurs'],
-    github: '', // À REMPLACER
-    demo: '',   // À REMPLACER
+    github: '',
+    demo: '',
   },
 ];
 
