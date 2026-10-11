@@ -1,4 +1,4 @@
-import {
+﻿import {
   Code2, Server, Monitor, Smartphone, Brain, Database, Container, Globe,
 } from 'lucide-react';
 
@@ -13,7 +13,7 @@ export const personalInfo = {
   github: 'https://github.com/zinebelkhalifi096-dot',
   linkedin: 'https://www.linkedin.com/in/zineb-e-865826288/',
   cvPath: '/cv-zineb-el-khalifi.pdf', // fichier à placer dans public/
-  profilePhoto: null, // quand public/photo.jpg existe, remplacer null par '/photo.jpg'
+  profilePhoto: '/photo.jpeg',
   stageInfo: 'Disponible pour un stage PFE – février 2027',
 };
 
