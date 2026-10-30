@@ -685,6 +685,30 @@ export const projects = [
     demo: '',
     images: [
       {
+        src: '/projects/matchna/14-connexion.jpeg',
+        title: 'Connexion',
+        caption: "Accès au compte de l'organisateur.",
+        description: "Écran de connexion par e-mail et mot de passe, avec un lien pour créer un compte.",
+        alt: "Écran de connexion de l'application MATCHNA.",
+        tags: ['Mobile', 'UI/UX'],
+      },
+      {
+        src: '/projects/matchna/12-inscription-nom.jpeg',
+        title: "Inscription : nom",
+        caption: "Première étape de la création de compte.",
+        description: "Saisie du nom complet de l'organisateur, sur un parcours d'inscription en trois étapes avec un lien de connexion pour les utilisateurs existants.",
+        alt: "Première étape de l'inscription : nom complet.",
+        tags: ['Mobile', 'UI/UX'],
+      },
+      {
+        src: '/projects/matchna/13-inscription-equipe.jpeg',
+        title: "Inscription : équipe",
+        caption: "Deuxième étape de la création de compte.",
+        description: "Saisie du nom de l'équipe de l'organisateur, avec des boutons pour revenir en arrière ou passer à l'étape suivante.",
+        alt: "Deuxième étape de l'inscription : nom de l'équipe.",
+        tags: ['Mobile', 'UI/UX'],
+      },
+      {
         src: '/projects/matchna/01-bienvenue.jpeg',
         title: 'Création du compte',
         caption: "Message d'accueil après l'inscription.",
